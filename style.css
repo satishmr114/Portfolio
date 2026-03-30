@@ -1,7 +1,11 @@
 body {
-  margin: 0;
-  font-family: Arial;
-  background: #f9fafb;
+    margin: 0;
+    padding: 0;
+    background-image: url('images/background.jpg');
+    background-size: cover;        /* full screen */
+    background-position: center;   /* center image */
+    background-repeat: no-repeat;  /* no repeat */
+    background-attachment: fixed;  /* stays while scrolling */
 }
 
 /* NAVBAR */
