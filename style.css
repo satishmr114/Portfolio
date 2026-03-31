@@ -4,14 +4,6 @@ body {
   background-position: center;
   background-repeat: yes -repeat;
 }
-/* NAVBAR */
-header {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px;
-  background: white;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
 
 .hero {
   position: relative;
@@ -91,4 +83,7 @@ header {
 #contact {
   padding: 60px;
   text-align: center;
+    p {
+  color: white;
+    }
 }
