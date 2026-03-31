@@ -1,11 +1,10 @@
 body {
-    margin: 0;
-    padding: 0;
-    background-image:https://raw.githubusercontent.com/satishmr114/Satish-Portfolio11/refs/heads/main/background%20image.jpg ('images/background.jpg');
-    background-size: cover;        /* full screen */
-    background-position: center;   /* center image */
-    background-repeat: no-repeat;  /* no repeat */
-    background-attachment: fixed;  /* stays while scrolling */
+  background-image: url("https://raw.githubusercontent.com/john123/my-website/main/images/bg.jpg");
+  background-size: cover;        /* makes it fill screen */
+  background-position: center;   /* center the image */
+  background-repeat: no-repeat;  /* no repeating */
+  height: 100vh;
+  margin: 0;
 }
 
 /* NAVBAR */
