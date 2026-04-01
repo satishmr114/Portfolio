@@ -1,115 +1,157 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Satish M R | Graphic & UI/UX Designer Portfolio</title>
-    <!-- Google Fonts & Simple Icons (Font Awesome) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Satish Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * {margin:0;padding:0;box-sizing:border-box;font-family:Arial, sans-serif;}body {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: white;
+  scroll-behavior: smooth;
+}
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Certificate Gallery</title>
-    <link rel="stylesheet" href="style.css">
-    
-    <!-- Async: Loads asynchronously, executes as soon as loaded -->
-    <script src="script.js" async></script>
-    
-    <!-- Defer: Loads asynchronously, executes after HTML is parsed -->
-    <script src="script.js" defer>
-        
-    </script>
-    <!-- Your content -->
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+header {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 50px;
+  position:fixed;
+  width:100%;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(10px);
+  z-index:1000;
+}
 
-        body {
-            font-family: 'Inter', sans-serif;
-            background: #fefefe;
-            color: #1a1e2b;
-            scroll-behavior: smooth;
-            line-height: 1.4;
-        }
+header h1 {color:#00e6e6;}
 
-        /* custom scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #f0f0f0;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #c084fc;
-            border-radius: 10px;
-        }
+nav a {
+  margin:0 15px;
+  text-decoration:none;
+  color:white;
+  transition:0.3s;
+}
 
-        /* container */
-        .container {
-            max-width: 1280px;
-            margin: 0 auto;
-            padding: 0 30px;
-        }
+nav a:hover {color:#00e6e6;}
 
-        /* animations */
-        @keyframes fadeUp {
-            0% { opacity: 0; transform: translateY(30px);}
-            100% { opacity: 1; transform: translateY(0);}
-        }
-        @keyframes fadeLeft {
-            0% { opacity: 0; transform: translateX(-30px);}
-            100% { opacity: 1; transform: translateX(0);}
-        }
-        @keyframes glowPulse {
-            0% { box-shadow: 0 0 0 0 rgba(192, 132, 252, 0.4);}
-            70% { box-shadow: 0 0 0 12px rgba(192, 132, 252, 0);}
-            100% { box-shadow: 0 0 0 0 rgba(192, 132, 252, 0);}
-        }
-        .animate-on-scroll {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.8s cubic-bezier(0.2, 0.9, 0.4, 1.1), transform 0.7s ease;
-        }
-        .animate-on-scroll.reveal {
-            opacity: 1;
-            transform: translateY(0);
-        }
+section {
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:20px;
+}
 
-        /* header / nav */
-        header {
-            background: rgba(255,255,255,0.92);
-            backdrop-filter: blur(12px);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            border-bottom: 1px solid #e9e9ef;
-            padding: 16px 0;
-        }
-        .nav-bar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-        .logo h1 {
-            font-size: 1.8rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, #7c3aed, #c084fc);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            letter-spacing: -0.5px;
-        }
-        .logo p {
-            font-size: 0.8rem;
-            font-weight: 500;
-            color: #4b5563;
+.hero h2 {
+  font-size:3rem;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.hero p {
+  margin-top:10px;
+  font-size:1.2rem;
+  animation: slideUp 2s ease-in-out;
+}
+
+.btn {
+  margin-top:20px;
+  padding:10px 20px;
+  border:none;
+  background:#00e6e6;
+  color:black;
+  cursor:pointer;
+  border-radius:25px;
+  transition:0.3s;
+}
+
+.btn:hover {background:white;}
+
+.projects {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+  width:100%;
+  max-width:1000px;
+}
+
+.card {
+  background: rgba(255,255,255,0.1);
+  padding:20px;
+  border-radius:15px;
+  transition:0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.05);
+  background: rgba(0,230,230,0.2);
+}
+
+.social-icons {
+  margin-top:20px;
+}
+
+.social-icons a {
+  color:white;
+  margin:0 10px;
+  font-size:1.5rem;
+  transition:0.3s;
+}
+
+.social-icons a:hover {color:#00e6e6;}
+
+footer {
+  padding:20px;
+  text-align:center;
+  background:black;
+}
+
+@keyframes fadeIn {
+  from {opacity:0;} to {opacity:1;}
+}
+
+@keyframes slideUp {
+  from {transform:translateY(50px); opacity:0;} to {transform:translateY(0); opacity:1;}
+}
+
+  </style>
+</head>
+<body><header>
+  <h1>Satish</h1>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header><section id="home" class="hero">
+  <h2>Hi, I'm Satish</h2>
+  <p>Graphic Designer | UI/UX Designer</p>
+  <button class="btn">View My Work</button>
+</section><section id="about">
+  <h2>About Me</h2>
+  <p>I am a creative designer with experience in UI/UX, branding, and digital design.</p>
+</section><section id="projects">
+  <h2>My Projects</h2>
+  <div class="projects">
+    <div class="card">Project 1</div>
+    <div class="card">Project 2</div>
+    <div class="card">Project 3</div>
+  </div>
+</section><section id="contact">
+  <h2>Contact Me</h2>
+  <p>Email: your@email.com</p>
+  <div class="social-icons">
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+    <a href="#"><i class="fab fa-github"></i></a>
+  </div>
+</section><footer>
+  <p>© 2026 Satish Portfolio</p>
+</footer></body>
+</html>            color: #4b5563;
         }
         .nav-links {
             display: flex;
