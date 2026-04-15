@@ -1,115 +1,150 @@
-/* ========== RESET & BASE STYLES ========== */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
-    /* 🔥 YOUR BACKGROUND IMAGE */
-    background: url('https://github.com/satishmr114/Portfolio/blob/main/images/Background/bg3.jpg?raw=true') no-repeat center center fixed;
-    background-size: cover;
-
-    color: ;
-    line-height: 1.6;
-    scroll-behavior: smooth;
-    min-height: 100vh;
-
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #0f172a, #020617);
+  color: white;
 }
 
-/* Animation */
-@keyframes gradientBG {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-/* Custom Font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
-
-/* ========== ANIMATIONS ========== */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(40px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes fadeInLeft {
-    from {
-        opacity: 0;
-        transform: translateX(-40px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes fadeInRight {
-    from {
-        opacity: 0;
-        transform: translateX(40px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes zoomIn {
-    from {
-        transform: scale(0.8);
-        opacity: 0;
-    }
-    to {
-        transform: scale(1);
-        opacity: 1;
-    }
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-/* ========== CONTAINER ========== */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
-}
-
-/* ========== HEADER & NAVIGATION ========== */
+/* HEADER */
 header {
-    box-shadow: 0 2px 20px white(0, 0, 0, 0);
-    position: static; /* or remove this line completely */
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 50px;
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(10px);
+  background: rgba(255,255,255,0.05);
 }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
+header a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
 }
 
-.logo {
-    font-size: 1.5rem;
-    font-weight: 800;
+header a:hover {
+  color: #38bdf8;
+}
+
+/* HERO */
+.hero {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 50px;
+}
+
+.hero h2 {
+  color: #38bdf8;
+  margin: 10px 0;
+}
+
+.hero p {
+  max-width: 500px;
+  margin: 10px auto;
+  opacity: 0.8;
+}
+
+/* BUTTONS */
+.btn {
+  padding: 12px 25px;
+  background: linear-gradient(45deg, #38bdf8, #0ea5e9);
+  border-radius: 10px;
+  color: black;
+  text-decoration: none;
+  margin: 10px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.btn-outline {
+  border: 1px solid #38bdf8;
+  padding: 12px 25px;
+  border-radius: 10px;
+  color: #38bdf8;
+  margin: 10px;
+}
+
+/* SECTION TITLE */
+.section-title {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 30px;
+}
+
+/* PROJECTS */
+#projects {
+  padding: 60px 20px;
+}
+
+.projects-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.project-card {
+  position: relative;
+  width: 300px;
+  overflow: hidden;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.project-card img {
+  width: 100%;
+  transition: 0.5s;
+}
+
+/* HOVER EFFECT */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0,0,0,0.7);
+  width: 100%;
+  text-align: center;
+  padding: 15px;
+  transform: translateY(100%);
+  transition: 0.5s;
+}
+
+.project-card:hover img {
+  transform: scale(1.1);
+}
+
+.project-card:hover .overlay {
+  transform: translateY(0);
+}
+
+/* ABOUT & CONTACT */
+#about, #contact {
+  padding: 60px 20px;
+  text-align: center;
+  max-width: 700px;
+  margin: auto;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #020617;
+}    font-weight: 800;
     background: linear-gradient(135deg, #667eea, #764ba2);
     background-clip: text;
     -webkit-background-clip: text;
